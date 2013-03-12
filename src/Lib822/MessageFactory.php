@@ -23,10 +23,10 @@ class MessageFactory
     /**
      * Create a new RFC822 message object
      *
-     * @param array  $headers The request headers
-     * @param string $body    The request body
+     * @param \Lib822\HeaderCollection[] $headers Map of HeaderCollection objects representing the message headers
+     * @param string                     $body    The message body
      */
-    public function create($headers, $body)
+    public function create(array $headers, $body)
     {
         return new Message($headers, $body);
     }
